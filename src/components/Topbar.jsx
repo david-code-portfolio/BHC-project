@@ -5,7 +5,7 @@ import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import profileImage from '../images/Profile Photo.jpg'
 
 function Topbar() {
-    return <div className="flex items-center justify-between col-span-3 max-xl:col-span-5 border-b-1 border-gray-300 pb-5 pt-1">
+    return <div className="flex items-center justify-between col-span-2 max-xl:col-span-3 border-b-1 border-gray-300 pb-5 pt-1">
         {/* Company name */}
         <h1 className="text-[1.25rem]">
             Real<span className="font-normal">Estate</span>
