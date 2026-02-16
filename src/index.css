@@ -1,1 +1,60 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+@theme {
+    --color-main: rgb(255, 255, 255);
+    --color-contrast: rgb(0, 0, 0);
+    --color-accent: rgb(0 100 255);
+    --color-non-active: rgb(150 150 150);
+
+    --radius-main: 3rem;
+}
+
+body{
+    @apply text-contrast font-medium;
+}
+
+button{
+    cursor: pointer;
+}
+
+/* ↓ Listing button fancy hover and active animation ↓ */
+
+.listing-btn{
+    position: relative;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.listing-btn:hover{
+    scale: 1.05;
+}
+.listing-btn:active{
+    scale: 1;
+}
+.listing-btn::after{
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    top: -25%;
+    left: -25%;
+    width: 10%;
+    height: 150%;
+    rotate: 30deg;
+    opacity: 0;
+    transition: left 0.5s;
+}
+
+.listing-btn:hover:after{
+    left: 125%;
+    opacity: 1;
+}
+
+/* ↓ Profile image hover ↓ */
+
+.icon{
+    transition: 0.3s;
+}
+.profile-image-btn:hover .icon{
+    color: var(--color-contrast);
+}
