@@ -5,6 +5,7 @@
     --color-contrast: rgb(0, 0, 0);
     --color-accent: rgb(0 100 255);
     --color-non-active: rgb(150 150 150);
+    --color-soft-grey: rgb(230 230 230);
 
     --radius-main: 3rem;
     --radius-soft: 1rem;
@@ -58,4 +59,10 @@ button{
 }
 .profile-image-btn:hover .icon{
     color: var(--color-contrast);
+}
+
+/* ↓ Active filter count badge ↓ */
+
+.active-filter-count::after{
+    
 }
