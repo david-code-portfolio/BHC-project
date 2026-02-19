@@ -22,6 +22,9 @@ function Filters() {
         filtersOpen ? setFiltersOpen(false) : setFiltersOpen(true);
     }
 
+    /* Dropdown open/close */
+    const [opened, setOpened] = useState(null)
+
     return <section className="max-md:col-span-full h-fit">
             {/* Filter section header */}
             <div className="flex justify-between">
@@ -54,20 +57,20 @@ function Filters() {
 
                 {/* Price range filters */}
                 <div className="my-4 flex min-md:justify-between gap-2">
-                    <DropDownFilter heading="Min. Price" options={dropDownOptions.price}></DropDownFilter>
-                    <DropDownFilter heading="Max. Price" options={dropDownOptions.price}></DropDownFilter>
+                    <DropDownFilter heading="Min. Price" options={dropDownOptions.price} opened={opened} setOpened={setOpened}></DropDownFilter>
+                    <DropDownFilter heading="Max. Price" options={dropDownOptions.price} opened={opened} setOpened={setOpened}></DropDownFilter>
                 </div>
 
                 {/* Room filters */}
                 <div className="my-4 flex min-md:justify-between gap-2">
-                    <DropDownFilter heading="Bedroom" options={dropDownOptions.rooms}></DropDownFilter>
-                    <DropDownFilter heading="Bathroom" options={dropDownOptions.rooms}></DropDownFilter>
+                    <DropDownFilter heading="Bedroom" options={dropDownOptions.rooms} opened={opened} setOpened={setOpened}></DropDownFilter>
+                    <DropDownFilter heading="Bathroom" options={dropDownOptions.rooms} opened={opened} setOpened={setOpened}></DropDownFilter>
                 </div>
 
                 {/* Size filters */}
                 <div className="my-4 flex min-md:justify-between gap-2 col-span-full">
-                    <DropDownFilter heading="Size (Min)" options={dropDownOptions.size}></DropDownFilter>
-                    <DropDownFilter heading="Size (Max)" options={dropDownOptions.size}></DropDownFilter>
+                    <DropDownFilter heading="Size (Min)" options={dropDownOptions.size} opened={opened} setOpened={setOpened}></DropDownFilter>
+                    <DropDownFilter heading="Size (Max)" options={dropDownOptions.size} opened={opened} setOpened={setOpened}></DropDownFilter>
                 </div>
                 <CheckBoxFilter heading="Accessibillity Features" filterOptions={filterOptionsThree}></CheckBoxFilter>
             </div>
