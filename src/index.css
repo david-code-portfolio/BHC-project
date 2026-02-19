@@ -60,6 +60,3 @@ button{
 .profile-image-btn:hover .icon{
     color: var(--color-contrast);
 }
-
-/* ↓ Active filter count badge ↓ */
-
