@@ -28,7 +28,7 @@ function dropDownFilter({heading, options, opened, setOpened}) {
             </div>
 
             {/* List of options */}
-            <ul className={`${opened === heading ? 'absolute' : 'hidden'} z-100 select-none grid gap-4 text-sm text-non-active font-bold left-0 top-[110%] border-2 border-soft-grey rounded-soft px-4 py-2 bg-main w-full`}>
+            <ul className={`${opened === heading ? 'absolute' : 'hidden'} z-100 select-none grid gap-4 text-sm text-non-active font-bold left-0 top-[110%] border-1 border-soft-grey rounded-soft px-4 py-2 bg-main w-full`}>
                 {
                     options.map((option, index) => {
                         return <>

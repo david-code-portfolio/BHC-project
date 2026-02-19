@@ -25,17 +25,17 @@ function Filters() {
     /* Dropdown open/close */
     const [opened, setOpened] = useState(null)
 
-    return <section className="max-md:col-span-full h-fit">
+    return <section className="max-lg:col-span-full h-fit">
             {/* Filter section header */}
-            <div className="flex justify-between">
-                <h2 className="font-medium text-contrast text-xl max-md:hidden">
+            <div className="flex justify-between pt-2">
+                <h2 className="font-medium text-contrast text-xl max-lg:hidden">
                     Filters
                 </h2>
 
                 {/* Mobile filter button */}
                 <button
                     onClick={handleFiltersOpenState}
-                    className="min-md:hidden cursor-pointer font-medium text-contrast text-xl flex gap-2 items-center"
+                    className="min-lg:hidden cursor-pointer font-medium text-contrast text-xl flex gap-2 items-center"
                 >
                     Filters
                     <FontAwesomeIcon 
@@ -51,7 +51,7 @@ function Filters() {
             </div>
 
             {/* Filters */}
-            <div className={`${filtersOpen || `` ? '' : 'hidden'} min-md:block`}>
+            <div className={`${filtersOpen ? '' : 'hidden'} min-lg:block`}>
                 <CheckBoxFilter heading="Property Type" filterOptions={filterOptionsOne}></CheckBoxFilter>
                 <CheckBoxFilter heading="Style of Home" filterOptions={filterOptionsTwo}></CheckBoxFilter>
 
